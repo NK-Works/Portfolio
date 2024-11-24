@@ -192,7 +192,7 @@ export const myProjects = [
       {
         id: 1,
         name: '.NET Core',
-        path: '/assets/project-info/project-tags/.net.png',
+        path: '/assets/project-info/project-tags/dotnet.png',
       },
       {
         id: 2,
