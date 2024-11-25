@@ -75,7 +75,7 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://https://github.com/NK-Works/Portfolio.git
+git clone https://github.com/NK-Works/Portfolio.git
 cd Portfolio
 ```
 
