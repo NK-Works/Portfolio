@@ -19,9 +19,7 @@ Welcome to my portfolio, a personal website designed to stand out with immersive
 2. ⚙️ [Tech Stack](#tech-stack)
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
-6. 🔗 [Links](#links)
-7. 📦 [Assets](#assets)
-8. 🚀 [More](#more)
+5. 🔗 [Links](#links)
 
 ## <a name="introduction">🤖 Introduction</a>
 
