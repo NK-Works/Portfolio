@@ -22,7 +22,7 @@ export const navLinks = [
   {
     id: 5,
     name: 'Resume',
-    href: 'https://drive.google.com/file/d/1i8a_x34fk_c_Dep4n2t_rqYnKQf9SxRt/view',
+    href: 'https://drive.google.com/file/d/1Al-KneSrFTP4HhQi9g1Ij13_MGrtxN1d/view',
   },
 ];
 
@@ -159,7 +159,7 @@ export const myProjects = [
       },
       {
         id: 2,
-        name: 'TailwindCSS',
+        name: 'NodeJS',
         path: '/assets/project-info/project-tags/tailwindcss.png',
       },
       {
@@ -211,43 +211,43 @@ export const myProjects = [
       },
     ],
   },
-  // {
-  //   title: 'Imaginify - AI Photo Manipulation App',
-  //   desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
-  //   subdesc:
-  //     'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
-  //   href: '/',
-  //   texture: '/textures/project/project5.mp4',
-  //   logo: '/assets/project-info/project-logo5.png',
-  //   logoStyle: {
-  //     backgroundColor: '#1C1A43',
-  //     border: '0.2px solid #252262',
-  //     boxShadow: '0px 0px 60px 0px #635BFF4D',
-  //   },
-  //   spotlight: '/assets/project-info/spotlight5.png',
-  //   tags: [
-  //     {
-  //       id: 1,
-  //       name: 'React.js',
-  //       path: '/assets/project-info/project-tags/react.svg',
-  //     },
-  //     {
-  //       id: 2,
-  //       name: 'TailwindCSS',
-  //       path: '/assets/project-info/project-tags/tailwindcss.png',
-  //     },
-  //     {
-  //       id: 3,
-  //       name: 'TypeScript',
-  //       path: '/assets/project-info/project-tags/typescript.png',
-  //     },
-  //     {
-  //       id: 4,
-  //       name: 'Framer Motion',
-  //       path: '/assets/project-info/project-tags/framer.png',
-  //     },
-  //   ],
-  // },
+  {
+    title: 'Novel Hub - Novel Reading/Writing App',
+    desc: 'Novel Hub is a modern and user-friendly web application designed for avid novel readers and aspiring authors. It\'s community of web novel enthusiasts, providing a platform for readers to engage in discussions while allowing authors to publish and manage their works.',
+    subdesc:
+      'Built with React.js, Node.js, MongoDB, Cloudinary and Framer, Novel Hub combines cutting-edge technology with a user-centric approach offering a great platform for budding authors and avid readers.',
+    href: 'https://novels-hub.vercel.app/',
+    texture: '/textures/project/novelhub.mp4',
+    logo: '/assets/project-info/novel-hub.png',
+    logoStyle: {
+      backgroundColor: '#1C1A43',
+      border: '0.2px solid #252262',
+      boxShadow: '0px 0px 60px 0px #635BFF4D',
+    },
+    spotlight: '/assets/project-info/spotlight5.png',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/assets/project-info/project-tags/react.svg',
+      },
+      {
+        id: 2,
+        name: 'NodeJS',
+        path: '/assets/project-info/project-tags/nodejs.png',
+      },
+      {
+        id: 3,
+        name: 'Framer Motion',
+        path: '/assets/project-info/project-tags/framer.svg',
+      },
+      {
+        id: 4,
+        name: 'MongoDB',
+        path: '/assets/project-info/project-tags/mongo.png',
+      },
+    ],
+  },
 ];
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
