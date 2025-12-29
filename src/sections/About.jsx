@@ -1,18 +1,22 @@
-import { useState, useEffect, useRef } from 'react';
-import Globe from 'react-globe.gl';
+import { Suspense, lazy, useEffect, useRef, useState } from 'react';
 
 import Button from '../components/Button.jsx';
+
+// Lazy-load Globe to avoid executing browser-only APIs (navigator.gpu) during SSR/build
+const Globe = lazy(() => import('react-globe.gl'));
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText('anneshunag@gmail.com');
-    setHasCopied(true);
+    if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText('anneshunag@gmail.com');
+      setHasCopied(true);
 
-    setTimeout(() => {
-      setHasCopied(false);
-    }, 2000);
+      setTimeout(() => {
+        setHasCopied(false);
+      }, 2000);
+    }
   };
 
   const globeRef = useRef();
@@ -57,18 +61,20 @@ const About = () => {
         <div className="col-span-1 xl:row-span-4">
           <div className="grid-container">
             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
-              <Globe
-                height={326}
-                width={326}
-                ref={globeRef}
-                backgroundColor="rgba(0, 0, 0, 0)"
-                backgroundImageOpacity={0.5}
-                showAtmosphere
-                showGraticules
-                globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-                bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.webp"
-                labelsData={[{ lat: 21.1458, lng: 78.8718, text: 'India', color: 'white', size: 15 }]}
-              />
+              <Suspense fallback={<div className="text-white">Loading globe...</div>}>
+                <Globe
+                  height={326}
+                  width={326}
+                  ref={globeRef}
+                  backgroundColor="rgba(0, 0, 0, 0)"
+                  backgroundImageOpacity={0.5}
+                  showAtmosphere
+                  showGraticules
+                  globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+                  bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.webp"
+                  labelsData={[{ lat: 21.1458, lng: 78.8718, text: 'India', color: 'white', size: 15 }]}
+                />
+              </Suspense>
             </div>
             <div>
               <p className="grid-headtext">I&apos;m very flexible with time zone communications & locations</p>
