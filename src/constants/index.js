@@ -31,7 +31,7 @@ export const clientReviews = [
     id: 1,
     name: 'Emily Johnson',
     position: 'Marketing Director at GreenLeaf',
-    img: 'assets/clients-data/review1.png',
+    img: 'assets/clients-data/review1.webp',
     review:
       'Working with Anneshu was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
   },
@@ -39,7 +39,7 @@ export const clientReviews = [
     id: 2,
     name: 'Mark Rogers',
     position: 'Founder of TechGear Shop',
-    img: 'assets/clients-data/review2.png',
+    img: 'assets/clients-data/review2.webp',
     review:
       'Anneshu\'s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He\'s a true professional! Fantastic work.',
   },
@@ -47,7 +47,7 @@ export const clientReviews = [
     id: 3,
     name: 'John Dohsas',
     position: 'Project Manager at UrbanTech ',
-    img: 'assets/clients-data/review3.png',
+    img: 'assets/clients-data/review3.webp',
     review:
       'I can\'t say enough good things about Anneshu. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
   },
@@ -55,7 +55,7 @@ export const clientReviews = [
     id: 4,
     name: 'Ether Smith',
     position: 'CEO of BrightStar Enterprises',
-    img: 'assets/clients-data/review4.png',
+    img: 'assets/clients-data/review4.webp',
     review:
       'Anneshu was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
   },
@@ -69,13 +69,13 @@ export const myProjects = [
       'Offers chatbot interactions, image analysis, voice processing, and multilingual support through a Streamlit interface, powered by Python, AI models, and advanced audio/image utilities.',
     href: 'https://unravel-ai.streamlit.app/',
     texture: '/textures/project/unravelai.mp4',
-    logo: '/assets/project-info/ai-assist.png',
+    logo: '/assets/project-info/ai-assist.webp',
     logoStyle: {
       backgroundColor: '#13202F',
       border: '0.2px solid #17293E',
       boxShadow: '0px 0px 60px 0px #2F6DB54D',
     },
-    spotlight: '/assets/project-info/spotlight2.png',
+    spotlight: '/assets/project-info/spotlight2.webp',
     tags: [
       {
         id: 1,
@@ -85,17 +85,17 @@ export const myProjects = [
       {
         id: 2,
         name: 'Gemini API',
-        path: '/assets/project-info/project-tags/gemini.png',
+        path: '/assets/project-info/project-tags/gemini.webp',
       },
       {
         id: 3,
         name: 'Python',
-        path: '/assets/project-info/project-tags/python.png',
+        path: '/assets/project-info/project-tags/python.webp',
       },
       {
         id: 4,
         name: 'Voice Processing',
-        path: '/assets/project-info/project-tags/voice.png',
+        path: '/assets/project-info/project-tags/voice.webp',
       },
     ],
   },
@@ -106,33 +106,33 @@ export const myProjects = [
       'The system made built upon IoT uses Raspberry Pi, which focuses on automation, security, user-friendliness, and scalability as its core requirements.',
     href: 'https://www.instructables.com/Raspberry-Pi-Based-Automated-Library-Management-Sy/',
     texture: '/textures/project/alms.mp4',
-    logo: '/assets/project-info/lib.png',
+    logo: '/assets/project-info/lib.webp',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
       boxShadow: '0px 0px 60px 0px #AA3C304D',
     },
-    spotlight: '/assets/project-info/spotlight1.png',
+    spotlight: '/assets/project-info/spotlight1.webp',
     tags: [
       {
         id: 1,
         name: 'Python',
-        path: '/assets/project-info/project-tags/python.png',
+        path: '/assets/project-info/project-tags/python.webp',
       },
       {
         id: 2,
         name: 'RaspberryPi',
-        path: '/assets/project-info/project-tags/rpi.png',
+        path: '/assets/project-info/project-tags/rpi.webp',
       },
       {
         id: 3,
         name: 'My SQL',
-        path: '/assets/project-info/project-tags/sql.png',
+        path: '/assets/project-info/project-tags/sql.webp',
       },
       {
         id: 4,
         name: 'Arduino',
-        path: '/assets/project-info/project-tags/arduino.png',
+        path: '/assets/project-info/project-tags/arduino.webp',
       },
     ],
   },
@@ -143,14 +143,14 @@ export const myProjects = [
       'From voting systems (used in example) to healthcare, finance, and cross-border services, IDentifyChain supports a wide range of applications where files verification is critical.',
     href: 'https://identify-chain.vercel.app/',
     texture: '/textures/project/identifychain.mp4',
-    logo: '/assets/project-info/blockchain-id.png',
+    logo: '/assets/project-info/blockchain-id.webp',
     logoStyle: {
       backgroundColor: '#60f5a1',
       background:'#325e53',
       border: '0.2px solid rgba(208, 213, 221, 1)',
       boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
     },
-    spotlight: '/assets/project-info/spotlight3.png',
+    spotlight: '/assets/project-info/spotlight3.webp',
     tags: [
       {
         id: 1,
@@ -160,12 +160,12 @@ export const myProjects = [
       {
         id: 2,
         name: 'NodeJS',
-        path: '/assets/project-info/project-tags/tailwindcss.png',
+        path: '/assets/project-info/project-tags/tailwindcss.webp',
       },
       {
         id: 3,
         name: 'TypeScript',
-        path: '/assets/project-info/project-tags/typescript.png',
+        path: '/assets/project-info/project-tags/typescript.webp',
       },
       {
         id: 4,
@@ -181,23 +181,23 @@ export const myProjects = [
       'Built with .NET Core, PostgreSQL for database management, Swagger for backend testing, and Handlebars for code formatting, it delivers seamless task execution.',
     href: 'https://www.youtube.com/playlist?list=PL8zzkwcyhj7Q6SvZ8dXR5Ih3yITbQz0PJ',
     texture: '/textures/project/robotcontroller.mp4',
-    logo: '/assets/project-info/robot.png',
+    logo: '/assets/project-info/robot.webp',
     logoStyle: {
       backgroundColor: '#0E1F38',
       border: '0.2px solid #0E2D58',
       boxShadow: '0px 0px 60px 0px #2F67B64D',
     },
-    spotlight: '/assets/project-info/spotlight4.png',
+    spotlight: '/assets/project-info/spotlight4.webp',
     tags: [
       {
         id: 1,
         name: '.NET Core',
-        path: '/assets/project-info/project-tags/dotnet.png',
+        path: '/assets/project-info/project-tags/dotnet.webp',
       },
       {
         id: 2,
         name: 'PostgreSQL',
-        path: '/assets/project-info/project-tags/postgres.png',
+        path: '/assets/project-info/project-tags/postgres.webp',
       },
       {
         id: 3,
@@ -207,7 +207,7 @@ export const myProjects = [
       {
         id: 4,
         name: 'Handlebars',
-        path: '/assets/project-info/project-tags/handlebars.png',
+        path: '/assets/project-info/project-tags/handlebars.webp',
       },
     ],
   },
@@ -218,13 +218,13 @@ export const myProjects = [
       'Built with React.js, Node.js, MongoDB, Cloudinary and Framer, Novel Hub combines cutting-edge technology with a user-centric approach offering a great platform for budding authors and avid readers.',
     href: 'https://novels-hub.vercel.app/',
     texture: '/textures/project/novelhub.mp4',
-    logo: '/assets/project-info/novel-hub.png',
+    logo: '/assets/project-info/novel-hub.webp',
     logoStyle: {
       backgroundColor: '#1C1A43',
       border: '0.2px solid #252262',
       boxShadow: '0px 0px 60px 0px #635BFF4D',
     },
-    spotlight: '/assets/project-info/spotlight5.png',
+    spotlight: '/assets/project-info/spotlight5.webp',
     tags: [
       {
         id: 1,
@@ -234,7 +234,7 @@ export const myProjects = [
       {
         id: 2,
         name: 'NodeJS',
-        path: '/assets/project-info/project-tags/nodejs.png',
+        path: '/assets/project-info/project-tags/nodejs.webp',
       },
       {
         id: 3,
@@ -244,7 +244,7 @@ export const myProjects = [
       {
         id: 4,
         name: 'MongoDB',
-        path: '/assets/project-info/project-tags/mongo.png',
+        path: '/assets/project-info/project-tags/mongo.webp',
       },
     ],
   },
@@ -268,7 +268,7 @@ export const workExperiences = [
     pos: 'AI Intern',
     duration: 'Nov. 2024 - Present',
     title: "Developed advanced NLP and Computer Vision solutions, enhancing project performance. Designed deep learning models with TensorFlow and PyTorch for sentiment analysis, text classification, and real-time data processing.",
-    icon: '/assets/experience/infosys-springboard-logo.png',
+    icon: '/assets/experience/infosys-springboard-logo.webp',
     animation: 'victory',
   },
   {
@@ -277,7 +277,7 @@ export const workExperiences = [
     pos: 'Campus Ambassador',
     duration: 'Oct. 2024 - Present',
     title: "Promoted Unstop's competitions via social media and notice boards, organized meetups and discussions to foster student collaboration, and encouraged participation in skill development and competitions.",
-    icon: '/assets/experience/unstop-icon.png',
+    icon: '/assets/experience/unstop-icon.webp',
     animation: 'clapping',
   },
   {
@@ -286,7 +286,7 @@ export const workExperiences = [
     pos: 'Web & Graphics Developer',
     duration: 'Mar. 2024 - Oct. 2024',
     title: "Developed and maintained the chapter's website using MERN stack, increasing user engagement by 30%. Designed promotional materials to enhance the chapter's online presence and boosting student engagement by over 25%.",
-    icon: '/assets/experience/acm-logo.png',
+    icon: '/assets/experience/acm-logo.webp',
     animation: 'salute',
   },
   

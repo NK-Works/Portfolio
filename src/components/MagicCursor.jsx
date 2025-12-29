@@ -1,61 +1,74 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const MagicCursor = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  // const [trail, setTrail] = useState([]);
-  const [isPointer, setIsPointer] = useState(false);
-  const [isHeroTag, setIsHeroTag] = useState(false);
+  const cursorRef = useRef(null);
+  const [isHovering, setIsHovering] = useState({ isPointer: false, isHeroTag: false });
 
   useEffect(() => {
-    const updateCursor = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-      // setTrail(prev => [...prev, { x: e.clientX, y: e.clientY, id: Date.now() }].slice(-20));
-    };
+    // Only run on non-touch devices
+    if (window.matchMedia('(pointer: coarse)').matches) return;
 
-    const updatePointer = () => {
-      const hoveredElement = document.elementFromPoint(position.x, position.y);
-      const isHero = hoveredElement?.closest('.hero_tag');
-      const isClickable = hoveredElement?.matches('button, a, select, [role="button"]') || 
-                         hoveredElement?.closest('button, a, select, [role="button"]');
-      
-      setIsHeroTag(!!isHero);
-      setIsPointer(!!isClickable);
+    let rafId;
+    let lastX = 0;
+    let lastY = 0;
+    let lastTime = 0;
+
+    const updateCursor = (e) => {
+      lastX = e.clientX;
+      lastY = e.clientY;
+
+      if (cursorRef.current) {
+        cursorRef.current.style.transform = `translate3d(${lastX}px, ${lastY}px, 0)`;
+      }
+
+      // Throttle expensive elementFromPoint checks (every 100ms)
+      const now = performance.now();
+      if (now - lastTime > 100) {
+        lastTime = now;
+        const hoveredElement = document.elementFromPoint(lastX, lastY);
+        
+        const isHero = hoveredElement?.closest('.hero_tag');
+        const isClickable = hoveredElement?.matches('button, a, select, [role="button"]') || 
+                           hoveredElement?.closest('button, a, select, [role="button"]');
+        
+        // Only update state if it changes
+        setIsHovering(prev => {
+          if (prev.isHeroTag !== !!isHero || prev.isPointer !== !!isClickable) {
+            return { isHeroTag: !!isHero, isPointer: !!isClickable };
+          }
+          return prev;
+        });
+      }
     };
 
     window.addEventListener('mousemove', updateCursor);
-    window.addEventListener('mousemove', updatePointer);
 
     return () => {
       window.removeEventListener('mousemove', updateCursor);
-      window.removeEventListener('mousemove', updatePointer);
+      cancelAnimationFrame(rafId);
     };
-  }, [position.x, position.y]);
+  }, []);
+
+  // Don't render on touch devices
+  if (typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches) {
+    return null;
+  }
+
+  const { isPointer, isHeroTag } = isHovering;
 
   return (
-    <>
-      <div 
-        className="magic-cursor"
-        style={{
-          left: `${position.x}px`,
-          top: `${position.y}px`,
-          width: isHeroTag ? '120px' : isPointer ? '80px' : '40px',
-          height: isHeroTag ? '120px' : isPointer ? '80px' : '40px',
-          transition: 'width 0.3s ease, height 0.3s ease',
-        }}
-      />
-      {/* {trail.map((point, index) => (
-        <div
-          key={point.id}
-          className="cursor-trail"
-          style={{
-            left: `${point.x}px`,
-            top: `${point.y}px`,
-            opacity: 1 - (index / trail.length),
-            transform: `scale(${1 - (index / trail.length)})`,
-          }}
-        />
-      ))} */}
-    </>
+    <div 
+      ref={cursorRef}
+      className="magic-cursor pointer-events-none fixed top-0 left-0 z-50 rounded-full mix-blend-difference"
+      style={{
+        width: isHeroTag ? '120px' : isPointer ? '80px' : '40px',
+        height: isHeroTag ? '120px' : isPointer ? '80px' : '40px',
+        transition: 'width 0.3s ease, height 0.3s ease, transform 0.1s linear',
+        // Centering logic using margins to avoid conflict with translate
+        marginLeft: isHeroTag ? '-60px' : isPointer ? '-40px' : '-20px',
+        marginTop: isHeroTag ? '-60px' : isPointer ? '-40px' : '-20px',
+      }}
+    />
   );
 };
 
