@@ -1,18 +1,20 @@
 import { Leva } from 'leva';
-import { Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { useMediaQuery } from 'react-responsive';
 import { PerspectiveCamera } from '@react-three/drei';
 
-import Cube from '../components/Cube.jsx';
-import Rings from '../components/Rings.jsx';
-import ReactLogo from '../components/ReactLogo.jsx';
 import Button from '../components/Button.jsx';
-import Target from '../components/Target.jsx';
 import CanvasLoader from '../components/Loading.jsx';
 import HeroCamera from '../components/HeroCamera.jsx';
 import { calculateSizes } from '../constants/index.js';
-import { HackerRoom } from '../components/HackerRoom.jsx';
+
+// Lazy load 3D components
+const Cube = lazy(() => import('../components/Cube.jsx'));
+const Rings = lazy(() => import('../components/Rings.jsx'));
+const ReactLogo = lazy(() => import('../components/ReactLogo.jsx'));
+const Target = lazy(() => import('../components/Target.jsx'));
+const HackerRoom = lazy(() => import('../components/HackerRoom.jsx').then(module => ({ default: module.HackerRoom })));
 
 const Hero = () => {
   // Use media queries to determine screen size
@@ -32,7 +34,7 @@ const Hero = () => {
       </div>
 
       <div className="mt-5 w-full h-full absolute inset-0">
-        <Canvas className="w-full h-full">
+        <Canvas className="w-full h-full" dpr={[1, 2]}>
           <Suspense fallback={<CanvasLoader />}>
             {/* To hide controller */}
             <Leva hidden />

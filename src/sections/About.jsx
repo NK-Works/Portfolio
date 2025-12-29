@@ -30,7 +30,7 @@ const About = () => {
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <img src="assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
+            <img src="assets/grid1.webp" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
             <div>
               <p className="grid-headtext">Hi, I&apos;m Anneshu Nag</p>
               <p className="grid-subtext">
@@ -42,7 +42,7 @@ const About = () => {
 
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <img src="assets/grid2.png" alt="grid-2" className="w-full sm:h-[279px] h-fit object-contain" />
+            <img src="assets/grid2.webp" alt="grid-2" className="w-full sm:h-[279px] h-fit object-contain" />
 
             <div>
               <p className="grid-headtext">Tech Stack</p>
@@ -66,7 +66,7 @@ const About = () => {
                 showAtmosphere
                 showGraticules
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-                bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
+                bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.webp"
                 labelsData={[{ lat: 21.1458, lng: 78.8718, text: 'India', color: 'white', size: 15 }]}
               />
             </div>
@@ -82,7 +82,7 @@ const About = () => {
 
         <div className="xl:col-span-2 xl:row-span-3">
           <div className="grid-container">
-            <img src="assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
+            <img src="assets/grid3.webp" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
 
             <div>
               <p className="grid-headtext">My Passion for Coding</p>
@@ -96,7 +96,7 @@ const About = () => {
         <div className="xl:col-span-1 xl:row-span-2">
           <div className="grid-container">
             <img
-              src="assets/grid4.png"
+              src="assets/grid4.webp"
               alt="grid-4"
               className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
             />
